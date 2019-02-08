@@ -84,7 +84,7 @@ const encrypt = (key, data, options = {}) => importKey(key)
 /**
  * 
  * @param {String} key 
- * @param {Object} data 
+ * @param {String} data 
  * @param {*} options to be defined, for future needs
  * @returns {Promise<String>}
  */
