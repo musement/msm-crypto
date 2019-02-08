@@ -1,0 +1,23 @@
+{
+  "name": "msm-crypto",
+  "version": "1.0.0",
+  "description": "crypto utils for musement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musement/msm-crypto.git"
+  },
+  "keywords": [
+    "crypto",
+    "musement"
+  ],
+  "author": "lsimone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/musement/msm-crypto/issues"
+  },
+  "homepage": "https://github.com/musement/msm-crypto#readme"
+}
