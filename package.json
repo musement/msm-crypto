@@ -4,7 +4,7 @@
   "description": "crypto utils for musement",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "dev": "webpack --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js"
   },
@@ -27,6 +27,7 @@
     "@babel/preset-env": "^7.3.4",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
+    "jest": "^24.1.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"

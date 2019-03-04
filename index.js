@@ -16,12 +16,14 @@ const obj2ab = obj => str2ab(JSON.stringify(obj))
 
 const ab2obj = ab => JSON.parse(ab2str(ab))
 
+const windowCrypto = window.crypto || window.msCrypto // msCrypto is needed for IE11
+
 /**
  * 
  * @param {String} key 
  * @returns {Promise<CryptoKey>}
  */
-const importKey = key => window.crypto.subtle.importKey(
+const importKey = key => windowCrypto.subtle.importKey(
     "jwk", //can be "jwk" or "raw"
     {   //this is an example jwk key, "raw" would be an ArrayBuffer
         kty: "oct",
@@ -42,7 +44,7 @@ const importKey = key => window.crypto.subtle.importKey(
  * @param {Object} data 
  * @param {*} options to be defined, for future needs
  */
-const encryptWithKey = (key, data, options = {}) => window.crypto.subtle.encrypt(
+const encryptWithKey = (key, data, options = {}) => windowCrypto.subtle.encrypt(
     {
         name: "AES-CTR",
         //Don't re-use counters!
@@ -60,7 +62,7 @@ const encryptWithKey = (key, data, options = {}) => window.crypto.subtle.encrypt
  * @param {ArrayBuffer} data 
  * @param {*} options to be defined, for future needs
  */
-const decryptWithKey = (key, data, options = {}) => window.crypto.subtle.decrypt(
+const decryptWithKey = (key, data, options = {}) => windowCrypto.subtle.decrypt(
     {
         name: "AES-CTR",
         counter: new ArrayBuffer(16), //The same counter you used to encrypt
