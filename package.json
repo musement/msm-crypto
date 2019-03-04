@@ -2,15 +2,14 @@
   "name": "msm-crypto",
   "version": "1.0.0",
   "description": "crypto utils for musement",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --coverage",
-    "dev": "webpack --config ./build/webpack.dev.js",
-    "build": "webpack --config ./build/webpack.prod.js"
-  },
+  "main": "./dist/msmCrypto.bundle.js",
+  "homepage": "https://github.com/musement/msm-crypto#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/musement/msm-crypto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/musement/msm-crypto/issues"
   },
   "keywords": [
     "crypto",
@@ -18,10 +17,11 @@
   ],
   "author": "lsimone",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/musement/msm-crypto/issues"
+  "scripts": {
+    "test": "jest --coverage",
+    "dev": "webpack --config ./build/webpack.dev.js",
+    "build": "webpack --config ./build/webpack.prod.js"
   },
-  "homepage": "https://github.com/musement/msm-crypto#readme",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
