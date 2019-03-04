@@ -1,12 +1,12 @@
 const path = require("path");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./index.js",
   output: {
-    filename: 'msm-crypto.bundle.js',
-    path: path.resolve(__dirname, '../dist'),
-    library: 'msmCrypto'
+    filename: "msm-crypto.bundle.js",
+    path: path.resolve(__dirname, "../dist"),
+    library: "msmCrypto"
   },
   module: {
     rules: [
@@ -20,6 +20,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin(["dist"])
   ]
 };
