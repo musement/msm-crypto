@@ -6,7 +6,7 @@ module.exports = {
   output: {
     filename: 'msm-crypto.bundle.js',
     path: path.resolve(__dirname, '../dist'),
-    library: 'msm-crypto'
+    library: 'msmCrypto'
   },
   module: {
     rules: [
