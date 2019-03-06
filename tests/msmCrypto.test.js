@@ -1,16 +1,24 @@
+import "babel-polyfill";
+
 describe('Testing MsmCrypto', () => {
 
-  beforeEach(() => {
-    page.goto(PATH, { waitUntil: 'load' })
-        .catch((err) => console.log(err))
+  beforeEach(async () => {
+    await page.goto(`http://127.0.0.1:4400`, { waitUntil: 'load' })
   })
   
-  test('Should return bar', () => {
-    const msmCrypto = page.evaluate(() => {
+  test('Should return bar', async () => {
+
+    const msmCrypto = await page.evaluate(() => {
       console.log('Loaded msmCrypto');
-      return msmCrypto();
+      return msmCrypto;
     })
-    .then(() => expect(() => 'bar').toBe('bar'))
-    .catch((err) => console.log(err))
+    
+    /**
+     * Here you can use msmCrypto as a normal ES/CJS import.
+     * At the moment I'm just making a test mock:
+     */
+
+    expect('bar').toBe('bar')
+
   })
 })
