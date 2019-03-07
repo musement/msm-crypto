@@ -1,4 +1,4 @@
-# [WIP] Musement crypto utils
+# Musement crypto utils
 
 ## usage
 
