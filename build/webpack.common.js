@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 module.exports = {
   entry: "./index.js",
   output: {
-    filename: "msmCrypto.bundle.js",
+    filename: "msmCrypto.bundle.umd.js",
     path: path.resolve(__dirname, "../dist"),
     library: "msmCrypto"
   },

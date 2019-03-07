@@ -16,7 +16,7 @@ const obj2ab = obj => str2ab(JSON.stringify(obj))
 
 const ab2obj = ab => JSON.parse(ab2str(ab))
 
-const windowCrypto = window.crypto || window.msCrypto // msCrypto is needed for IE11
+const windowCrypto = (typeof window !== 'undefined') && (window.crypto || window.msCrypto) // msCrypto is needed for IE11
 
 /**
  *
