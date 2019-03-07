@@ -18,7 +18,7 @@ Currently we provide 2 methods;
  * @param {*} options to be defined, for future needs
  * @returns {Promise<String>}
  */
-encrypt = (key, data, options = {})
+encrypt(key, data, options = {})
 ```
 
 ```
