@@ -1,4 +1,6 @@
-# Musement crypto utils
+# [WIP] Isomorphic Musement crypto utils
+
+It supports nodejs too.
 
 ## usage
 
